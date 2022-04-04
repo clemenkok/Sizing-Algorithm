@@ -137,6 +137,7 @@ int main() {
 	// Ordered Insertion Function for Odd Row - 2, 3, 1. Recurse from the Back.
 	v_sized = DuaInsertion(v_odd.size() - 1, 3, 0, 0, v_odd, v_sized);
 
+	// File I/O
 	outfile.open("output.txt");
 
 	for (int i = 2; i > -1; i = i - 1) {
