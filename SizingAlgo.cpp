@@ -142,7 +142,7 @@ int main() {
 	outfile.open("output.txt");
 
 	for (int i = 2; i > -1; i = i - 1) {
-		outfile << v_sized[i] << v_sized[i + 3] << v_sized[i + 6] << std::endl;
+		outfile << v_sized[i + 6] << v_sized[i + 3] << v_sized[i] << std::endl;
 	}
 
 	outfile.close();
