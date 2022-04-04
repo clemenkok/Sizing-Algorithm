@@ -13,7 +13,7 @@ std::vector<double> SatuInsertion(
 	std::vector<double> v_even,
 	std::vector<double> v_sized) {
 	auto itPos = v_sized.begin() + ((t / 3) * 3 + n - 1);
-	// Insert for Case 1 (i.e., Tallest at Front).
+	
 	if (n == 1 && i != -1) {
 		v_sized.erase(itPos);
 		v_sized.insert(itPos, v_even[i]);
@@ -22,7 +22,7 @@ std::vector<double> SatuInsertion(
 		i = i - 1;
 		return SatuInsertion(i, n, t, v_even, v_sized);
 	}
-	// Insert for Case 3 (i.e., Shortest at Back).
+	
 	else if (n == 3 && i != -1) {
 		v_sized.erase(itPos);
 		v_sized.insert(itPos, v_even[i]);
@@ -31,7 +31,7 @@ std::vector<double> SatuInsertion(
 		i = i - 1;
 		return SatuInsertion(i, n, t, v_even, v_sized);
 	}
-	// Insert for Case 2 (i.e., Middle in Middle).
+	
 	else if (n == 2 && i != -1) {
 		v_sized.erase(itPos);
 		v_sized.insert(itPos, v_even[i]);
@@ -52,7 +52,8 @@ std::vector<double> DuaInsertion(
 	std::vector<double> v_sized) {
 	int pos = v_sized.size() - (t / 3) * 3 - n + k;
 	auto itPos = v_sized.begin() + v_sized.size() - (t / 3) * 3 - n + k;
-
+	
+	// For Dua, we will be inserting from the back instead.
 	if (n == 2 && i > -1 && v_sized[pos] == 0) {
 		v_sized.erase(itPos);
 		v_sized.insert(itPos, v_odd[i]);
