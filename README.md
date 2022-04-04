@@ -10,4 +10,4 @@ It is imagined that there may be a more efficient implementation that we can fin
 
 An alternative implementation in Python can be found at https://github.com/lsyurea/different-sorting-algorithms.
 
-Further work includes extending the implementation to rows of >3 ranks; the above implementation works only for formations of three ranks.
+Further work includes extending the implementation to rows of >3 ranks; the above implementation works only for formations of 3 ranks.
